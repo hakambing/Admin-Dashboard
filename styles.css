@@ -13,8 +13,6 @@ body {
     height: 50px;
     border-radius: 100px;
     cursor: pointer;
-    margin-left: 50px;
-    margin-top: 10px;
 }
 
 nav {
@@ -26,12 +24,26 @@ nav {
 
 nav ul {
     float: right;
-    margin-right: 20px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
     margin: 0 10px;
     display: inline;
+}
+
+.menu-bar i{
+    margin-top: 10px;
+    font-size: 25px;
+    color:white;
+    margin-left: 20px;
+}
+nav a{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
 }
 
 .side-menu {
@@ -40,6 +52,14 @@ nav ul li {
     width: 250px;
     height: 100%;
     margin-top: 80px;
+    display: none;
+    
+}
+
+#menu:checked ~ .side-menu{
+    display: block;
+    visibility: visible;
+ 
 }
 
 .side-menu a {
@@ -69,33 +89,22 @@ nav ul li {
 }
 
 #menu{
-   display: none; 
+    display: none;
 }
 
+
+
+
 nav .menu-bar{
-    float: right;
+    float: left;
     margin-top: 20px;
-    display: none;
+
     margin-right: 20px;
 }
 
 @media (max-width:900px){
-    .side-menu a span{
-        display: none;
-    }
-    .side-menu{
-        width: 55px;
-    }
-    .side-menu a i {
-        display: block;
-        line-height: 80px;
-        text-align: center;
-        margin-left: 0;
-        font-size: 20px;
-    }
-    .side-menu a:hover {
-        padding-left: 0px;
-    }
+    
+    
 
 
 }
