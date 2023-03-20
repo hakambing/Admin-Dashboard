@@ -32,9 +32,12 @@ body {
     grid-area: side;
 }
 
+
+
 .content {
     grid-area: content;
     margin: 30px;
+   
 }
 
 .wrapper {
@@ -91,6 +94,7 @@ body {
     grid-template-columns: 0.3fr 9fr 0.5fr 0.5fr 0.9fr;
     grid-template-areas: "searchIcon searchBar bellIcon smallDP username" ". message . . upload";
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
 }
 
 .header a {
@@ -186,6 +190,7 @@ body {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 20px;
+   
 }
 
 .projects {
@@ -260,7 +265,7 @@ body {
 }
 
 .alerts {
-    width: auto;
+    width: 70%;
     height: auto;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -283,7 +288,7 @@ body {
 }
 
 .friends {
-    width: auto;
+    width: 70%;
     height: auto;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -303,6 +308,22 @@ body {
 .friends p{
     font-size: 18px;
     font-weight: 400;
+}
+
+.friend {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+
+}
+
+.details, .status{
+    display: flex;
+    gap:10px
+}
+
+.fa-circle{
+    height: 10px;
+    margin-top: 25px;
 }
 
 @media only screen and (max-width: 855px) {
@@ -387,6 +408,49 @@ body {
     
     .content{
         display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 2%;
+       
     }
+
+    .proj-hide{
+        display: none;
+    }
+
+    .projects {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    
+    .announcements {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .colleagues {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .allproj{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .alerts{
+        width: 85%;
+    }
+
+    .friends{
+        width: 85%;
+        
+    }
+
+    .projHeader{
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+
 
 }
